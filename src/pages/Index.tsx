@@ -183,7 +183,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-6 py-24 text-center">
           <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
               Logith P
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
@@ -194,10 +194,19 @@ const Index = () => {
               design thinking, and data-driven insights to solve real-world problems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-700 hover:bg-blue-50">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="bg-white text-blue-700 hover:bg-blue-50"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 View Projects
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-700">
+              <Button 
+                size="lg" 
+                className="bg-blue-500 text-white hover:bg-blue-600 border-2 border-blue-300"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Contact Me
               </Button>
             </div>
@@ -231,7 +240,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20">
+      <section className="py-20" id="projects">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
@@ -316,19 +325,20 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white" id="contact">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
           <p className="text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
             Interested in collaborating or learning more about my work? 
             I'd love to discuss opportunities and innovative ideas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-900 hover:bg-blue-50">
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-blue-900 hover:bg-blue-50"
+            >
               Get In Touch
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
-              Download Resume
             </Button>
           </div>
         </div>
