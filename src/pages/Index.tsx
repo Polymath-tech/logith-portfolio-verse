@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -513,7 +514,10 @@ const Index = () => {
                       className="h-12 w-12 object-contain group-hover:scale-110 transition-transform"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling!.style.display = 'flex';
+                        const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                        if (nextElement) {
+                          nextElement.style.display = 'flex';
+                        }
                       }}
                     />
                     <div 
