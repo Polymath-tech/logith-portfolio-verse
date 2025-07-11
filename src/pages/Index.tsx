@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, Instagram, Mail, Phone, Linkedin } from "lucide-react";
+import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, Instagram, Mail, Phone, Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -33,17 +33,6 @@ const Index = () => {
       tags: ["Strategy", "E-commerce", "Planning"]
     },
     {
-      id: 4,
-      title: "Fitness E-commerce Store",
-      description: "Shopify website for fitness watches and headphones with complete product catalog",
-      category: "development",
-      type: "E-commerce Development",
-      link: "https://logi6369.myshopify.com/",
-      iframe: "https://logi6369.myshopify.com/",
-      icon: Smartphone,
-      tags: ["Shopify", "E-commerce", "Fitness"]
-    },
-    {
       id: 5,
       title: "Brand Bias Analysis",
       description: "Research on biases affecting new brands and strategies to reduce consumer bias",
@@ -64,17 +53,6 @@ const Index = () => {
       iframe: "https://www.canva.com/design/DAGsv4uK9vQ/AqwES9zbSsGojPJAMX53mw/view?embed",
       icon: Coffee,
       tags: ["Finance", "Break-even", "Bakery"]
-    },
-    {
-      id: 8,
-      title: "Dragon Ride Platform",
-      description: "Fantasy Uber-like platform using dragons for transportation in alternate universe",
-      category: "design",
-      type: "Concept Design",
-      link: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
-      iframe: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
-      icon: Sparkles,
-      tags: ["Figma", "Fantasy", "Transportation"]
     },
     {
       id: 9,
@@ -171,6 +149,29 @@ const Index = () => {
       link: "https://docs.google.com/document/d/1aDhqOYsDiMedHKrKgd_3CTlEW7mWtl5U/edit?usp=drivesdk&ouid=112241146013327975205&rtpof=true&sd=true",
       icon: BookOpen,
       tags: ["AR/VR", "Marketing", "Technology"]
+    },
+    // Moved to end as requested
+    {
+      id: 8,
+      title: "Dragon Ride Platform",
+      description: "Fantasy Uber-like platform using dragons for transportation in alternate universe",
+      category: "design",
+      type: "Concept Design",
+      link: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
+      iframe: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
+      icon: Sparkles,
+      tags: ["Figma", "Fantasy", "Transportation"]
+    },
+    {
+      id: 4,
+      title: "Fitness E-commerce Store",
+      description: "Shopify website for fitness watches and headphones with complete product catalog",
+      category: "development",
+      type: "E-commerce Development",
+      link: "https://logi6369.myshopify.com/",
+      iframe: "https://logi6369.myshopify.com/",
+      icon: Smartphone,
+      tags: ["Shopify", "E-commerce", "Fitness"]
     }
   ];
 
@@ -187,30 +188,6 @@ const Index = () => {
   const filteredProjects = activeFilter === "all" 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
-
-  const handleContact = () => {
-    const email = "logith2027ug@buildwithivb.com";
-    const phone = "6369573667";
-    const linkedin = "https://www.linkedin.com/in/logith-p/";
-    
-    const message = `Choose your preferred contact method:
-    
-📧 Email: ${email}
-📱 Phone: ${phone}
-💼 LinkedIn: ${linkedin}`;
-    
-    if (confirm(message + "\n\nClick OK to open email, Cancel to copy email address")) {
-      window.location.href = `mailto:${email}?subject=Portfolio Contact&body=Hi Logith, I saw your portfolio and would like to connect.`;
-    } else {
-      navigator.clipboard.writeText(email).then(() => {
-        alert("Email address copied to clipboard!");
-      });
-    }
-  };
-
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -229,22 +206,9 @@ const Index = () => {
               Passionate about creating innovative solutions that bridge business strategy, 
               design thinking, and data-driven insights to solve real-world problems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-blue-700 hover:bg-blue-50"
-                onClick={scrollToProjects}
-              >
-                View Projects
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-blue-500 text-white hover:bg-blue-600 border-2 border-blue-300"
-                onClick={handleContact}
-              >
-                Contact Me
-              </Button>
+            {/* Downward Arrow */}
+            <div className="flex justify-center animate-bounce">
+              <ChevronDown className="h-8 w-8 text-blue-200" />
             </div>
           </div>
         </div>
@@ -399,9 +363,9 @@ const Index = () => {
               size="lg" 
               variant="secondary" 
               className="bg-white text-blue-900 hover:bg-blue-50"
-              onClick={handleContact}
+              onClick={() => window.open('https://docs.google.com/document/d/1tKwV_2bp6hlQaIH-Hjn8Icy_I0Wb2gNv/edit?usp=sharing&ouid=115147097462895256428&rtpof=true&sd=true', '_blank')}
             >
-              Get In Touch
+              See My Resume
             </Button>
           </div>
         </div>
