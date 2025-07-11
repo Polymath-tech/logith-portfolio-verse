@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, Instagram } from "lucide-react";
+import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,20 +28,9 @@ const Index = () => {
       category: "business",
       type: "Capstone Project",
       link: "https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view",
-      iframe:"https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view?embed",
+      iframe: "https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view?embed",
       icon: Briefcase,
       tags: ["Strategy", "E-commerce", "Planning"]
-    },
-    {
-      id: 3,
-      title: "Retail Industry Immersion Winner",
-      description: "Decoded Burger King operations and analyzed store rotation strategies",
-      category: "business",
-      type: "Industry Analysis",
-      achievement: "Winner",
-      link: "#",
-      icon: TrendingUp,
-      tags: ["Retail", "Operations", "Analysis"]
     },
     {
       id: 4,
@@ -64,16 +53,6 @@ const Index = () => {
       iframe: "https://www.canva.com/design/DAGZ2SID4PI/zTwJOfSCtoKRS2YQVLUBjA/view?embed",
       icon: Users,
       tags: ["Psychology", "Branding", "Research"]
-    },
-    {
-      id: 6,
-      title: "B2B Bakery Supply Platform",
-      description: "UI/UX design for raw material supply business targeting home bakers",
-      category: "design",
-      type: "UI/UX Design",
-      link: "https://www.figma.com/design/dHs47W06V6QzSJWCtKDfGE/UI-UX-PROJECT?m=auto&t=BZCSoSxzx06w54AD-6",
-      icon: Palette,
-      tags: ["Figma", "B2B", "Bakery"]
     },
     {
       id: 7,
@@ -104,29 +83,9 @@ const Index = () => {
       category: "research",
       type: "Case Study",
       link: "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
-      iframe : "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
+      iframe: "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
       icon: BarChart3,
       tags: ["Finance", "Banking", "Analysis"]
-    },
-    {
-      id: 10,
-      title: "App Fatigue Syndrome Research",
-      description: "Research on user fatigue in payment apps and quick commerce platforms",
-      category: "research",
-      type: "Research Study",
-      link: "https://docs.google.com/document/d/1X3fnZyagqq0BBSCITHPT9yqv7n1luBJi/edit?usp=drivesdk&ouid=112241146013327975205&rtpof=true&sd=true",
-      icon: FileText,
-      tags: ["UX Research", "Psychology", "Apps"]
-    },
-    {
-      id: 11,
-      title: "Uber's Eastern Asia Entry",
-      description: "Case study on decision-making and bias in Uber's market expansion strategy",
-      category: "research",
-      type: "Case Study",
-      link: "https://drive.google.com/drive/folders/1-H6AF8XK4mRqd7jnzIr658yrSrZQg7d-",
-      icon: Globe,
-      tags: ["Strategy", "Expansion", "Decision Making"]
     },
     {
       id: 12,
@@ -151,16 +110,6 @@ const Index = () => {
       tags: ["Cybersecurity", "Business Plan", "Technology"]
     },
     {
-      id: 14,
-      title: "AR/VR Marketing Capstone",
-      description: "Final marketing capstone project focusing on AR/VR technologies",
-      category: "research",
-      type: "Capstone Project",
-      link: "https://docs.google.com/document/d/1aDhqOYsDiMedHKrKgd_3CTlEW7mWtl5U/edit?usp=drivesdk&ouid=112241146013327975205&rtpof=true&sd=true",
-      icon: BookOpen,
-      tags: ["AR/VR", "Marketing", "Technology"]
-    },
-    {
       id: 15,
       title: "iCover Insurtech Podcast",
       description: "Podcast analysis of US-based insurtech company iCover",
@@ -170,6 +119,58 @@ const Index = () => {
       iframe: "https://www.canva.com/design/DAGswIqT2lg/a5EdUep4VuUy51DTdfhc5w/view?embed",
       icon: Mic,
       tags: ["Podcast", "Insurtech", "Analysis"]
+    },
+    // Projects without iframe below
+    {
+      id: 3,
+      title: "Retail Industry Immersion Winner",
+      description: "Decoded Burger King operations and analyzed store rotation strategies",
+      category: "business",
+      type: "Industry Analysis",
+      achievement: "Winner",
+      link: "#",
+      icon: TrendingUp,
+      tags: ["Retail", "Operations", "Analysis"]
+    },
+    {
+      id: 6,
+      title: "B2B Bakery Supply Platform",
+      description: "UI/UX design for raw material supply business targeting home bakers",
+      category: "design",
+      type: "UI/UX Design",
+      link: "https://www.figma.com/design/dHs47W06V6QzSJWCtKDfGE/UI-UX-PROJECT?m=auto&t=BZCSoSxzx06w54AD-6",
+      icon: Palette,
+      tags: ["Figma", "B2B", "Bakery"]
+    },
+    {
+      id: 10,
+      title: "App Fatigue Syndrome Research",
+      description: "Research on user fatigue in payment apps and quick commerce platforms",
+      category: "research",
+      type: "Research Study",
+      link: "https://docs.google.com/document/d/1X3fnZyagqq0BBSCITHPT9yqv7n1luBJi/edit?usp=drivesdk&ouid=112241146013327975205&rtpof=true&sd=true",
+      icon: FileText,
+      tags: ["UX Research", "Psychology", "Apps"]
+    },
+    {
+      id: 11,
+      title: "Uber's Eastern Asia Entry",
+      description: "Case study on decision-making and bias in Uber's market expansion strategy",
+      category: "research",
+      type: "Case Study",
+      link: "https://drive.google.com/drive/folders/1-H6AF8XK4mRqd7jnzIr658yrSrZQg7d-",
+      icon: Globe,
+      tags: ["Strategy", "Expansion", "Decision Making"]
+    },
+    {
+      id: 14,
+      title: "AR/VR Marketing Capstone",
+      description: "Final marketing capstone project focusing on AR/VR technologies",
+      category: "research",
+      type: "Capstone Project",
+      link: "https://docs.google.com/document/d/1aDhqOYsDiMedHKrKgd_3CTlEW7mWtl5U/edit?usp=drivesdk&ouid=112241146013327975205&rtpof=true&sd=true",
+      icon: BookOpen,
+      tags: ["AR/VR", "Marketing", "Technology"]
     }
   ];
 
@@ -180,11 +181,36 @@ const Index = () => {
     { id: "research", label: "Research", count: projects.filter(p => p.category === "research").length },
     { id: "development", label: "Development", count: projects.filter(p => p.category === "development").length },
     { id: "hackathon", label: "Competitions", count: projects.filter(p => p.category === "hackathon").length },
+    { id: "media", label: "Media", count: projects.filter(p => p.category === "media").length },
   ];
 
   const filteredProjects = activeFilter === "all" 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
+
+  const handleContact = () => {
+    const email = "logith2027ug@buildwithivb.com";
+    const phone = "6369573667";
+    const linkedin = "https://www.linkedin.com/in/logith-p/";
+    
+    const message = `Choose your preferred contact method:
+    
+📧 Email: ${email}
+📱 Phone: ${phone}
+💼 LinkedIn: ${linkedin}`;
+    
+    if (confirm(message + "\n\nClick OK to open email, Cancel to copy email address")) {
+      window.location.href = `mailto:${email}?subject=Portfolio Contact&body=Hi Logith, I saw your portfolio and would like to connect.`;
+    } else {
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email address copied to clipboard!");
+      });
+    }
+  };
+
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -208,14 +234,14 @@ const Index = () => {
                 size="lg" 
                 variant="secondary" 
                 className="bg-white text-blue-700 hover:bg-blue-50"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={scrollToProjects}
               >
                 View Projects
               </Button>
               <Button 
                 size="lg" 
                 className="bg-blue-500 text-white hover:bg-blue-600 border-2 border-blue-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={handleContact}
               >
                 Contact Me
               </Button>
@@ -316,6 +342,16 @@ const Index = () => {
                         </Badge>
                       ))}
                     </div>
+                    {project.iframe && (
+                      <div className="mb-4">
+                        <iframe 
+                          src={project.iframe} 
+                          className="w-full h-48 rounded-lg border-2 border-gray-200"
+                          title={project.title}
+                          allowFullScreen
+                        />
+                      </div>
+                    )}
                     {project.link !== "#" && (
                       <Button 
                         variant="outline" 
@@ -338,15 +374,32 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white" id="contact">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
-          <p className="text-xl mb-12 text-blue-200 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-blue-200 max-w-2xl mx-auto">
             Interested in collaborating or learning more about my work? 
             I'd love to discuss opportunities and innovative ideas.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex items-center gap-2 text-blue-200">
+              <Mail className="h-5 w-5" />
+              <span>logith2027ug@buildwithivb.com</span>
+            </div>
+            <div className="flex items-center gap-2 text-blue-200">
+              <Phone className="h-5 w-5" />
+              <span>+91 6369573667</span>
+            </div>
+            <div className="flex items-center gap-2 text-blue-200">
+              <Linkedin className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/logith-p/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
           <div className="flex justify-center">
             <Button 
               size="lg" 
               variant="secondary" 
               className="bg-white text-blue-900 hover:bg-blue-50"
+              onClick={handleContact}
             >
               Get In Touch
             </Button>
