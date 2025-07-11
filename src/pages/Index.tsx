@@ -1,12 +1,12 @@
-
 import { useState } from "react";
-import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, Instagram, Mail, Phone, Linkedin, ChevronDown } from "lucide-react";
+import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const projects = [
     {
@@ -28,7 +28,7 @@ const Index = () => {
       category: "business",
       type: "Capstone Project",
       link: "https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view",
-      iframe: "https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view?embed",
+      iframe:"https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view?embed",
       icon: Briefcase,
       tags: ["Strategy", "E-commerce", "Planning"]
     },
@@ -61,7 +61,7 @@ const Index = () => {
       category: "research",
       type: "Case Study",
       link: "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
-      iframe: "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
+      iframe : "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
       icon: BarChart3,
       tags: ["Finance", "Banking", "Analysis"]
     },
@@ -98,7 +98,6 @@ const Index = () => {
       icon: Mic,
       tags: ["Podcast", "Insurtech", "Analysis"]
     },
-    // Projects without iframe below
     {
       id: 3,
       title: "Retail Industry Immersion Winner",
@@ -150,7 +149,6 @@ const Index = () => {
       icon: BookOpen,
       tags: ["AR/VR", "Marketing", "Technology"]
     },
-    // Moved to end as requested
     {
       id: 8,
       title: "Dragon Ride Platform",
@@ -185,14 +183,120 @@ const Index = () => {
     { id: "media", label: "Media", count: projects.filter(p => p.category === "media").length },
   ];
 
+  const skills = [
+    { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    { name: "Canva", logo: "https://cdn.worldvectorlogo.com/logos/canva-1.svg" },
+    { name: "Google Analytics", logo: "https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" },
+    { name: "Meta Ads Manager", logo: "https://cdn.worldvectorlogo.com/logos/meta-1.svg" },
+    { name: "Google Ads", logo: "https://cdn.worldvectorlogo.com/logos/google-ads-2.svg" },
+    { name: "SEMrush", logo: "https://cdn.worldvectorlogo.com/logos/semrush-1.svg" },
+    { name: "Shopify", logo: "https://cdn.worldvectorlogo.com/logos/shopify.svg" },
+    { name: "WordPress", logo: "https://cdn.worldvectorlogo.com/logos/wordpress-blue.svg" },
+    { name: "Excel", logo: "https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" },
+    { name: "Notion", logo: "https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg" },
+    { name: "Trello", logo: "https://cdn.worldvectorlogo.com/logos/trello.svg" },
+    { name: "JIRA", logo: "https://cdn.worldvectorlogo.com/logos/jira-1.svg" },
+    { name: "Zapier", logo: "https://cdn.worldvectorlogo.com/logos/zapier.svg" },
+    { name: "Airtable", logo: "https://cdn.worldvectorlogo.com/logos/airtable.svg" },
+    { name: "MixPanel", logo: "https://cdn.worldvectorlogo.com/logos/mixpanel-2.svg" },
+    { name: "Wix Studio", logo: "https://cdn.worldvectorlogo.com/logos/wix.svg" },
+    { name: "Google Trends", logo: "https://cdn.worldvectorlogo.com/logos/google-trends.svg" },
+    { name: "Aisensy", logo: "https://aisensy.com/favicon.ico" }
+  ];
+
   const filteredProjects = activeFilter === "all" 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="text-2xl font-bold text-blue-600">Logith P</div>
+            
+            {/* Desktop Menu */}
+            <div className="hidden md:flex space-x-8">
+              <button 
+                onClick={() => scrollToSection('education')}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Education
+              </button>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Projects
+              </button>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Skills
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Contact
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+              <div className="flex flex-col space-y-4">
+                <button 
+                  onClick={() => scrollToSection('education')}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left"
+                >
+                  Education
+                </button>
+                <button 
+                  onClick={() => scrollToSection('projects')}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left"
+                >
+                  Projects
+                </button>
+                <button 
+                  onClick={() => scrollToSection('skills')}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left"
+                >
+                  Skills
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left"
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white pt-24">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-6 py-24 text-center">
           <div className="animate-fade-in">
@@ -235,6 +339,56 @@ const Index = () => {
               <div className="text-3xl font-bold text-teal-600 mb-2">Multiple</div>
               <div className="text-gray-600">Industries</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50" id="education">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Education</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Academic journey shaping my expertise in business and marketing
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* IVB */}
+            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="text-center pb-4">
+                <div className="flex justify-center mb-4">
+                  <img 
+                    src="/lovable-uploads/06ce60f2-34ca-4d2d-b5ec-8f432bc3d6a6.png" 
+                    alt="IVB Logo" 
+                    className="h-16 w-auto"
+                  />
+                </div>
+                <CardTitle className="text-xl text-blue-600">IVB</CardTitle>
+                <CardDescription className="text-gray-600">
+                  Entrepreneurship Program in Marketing Specialization
+                </CardDescription>
+                <p className="text-sm text-purple-600 font-medium">2024 - 2027</p>
+              </CardHeader>
+            </Card>
+
+            {/* SRM University */}
+            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="text-center pb-4">
+                <div className="flex justify-center mb-4">
+                  <img 
+                    src="/lovable-uploads/b9e59b3f-2f54-4bbc-9a00-2656e44b8feb.png" 
+                    alt="SRM University Logo" 
+                    className="h-16 w-auto"
+                  />
+                </div>
+                <CardTitle className="text-xl text-blue-600">SRM University</CardTitle>
+                <CardDescription className="text-gray-600">
+                  Bachelor of Business Administration (BBA)
+                </CardDescription>
+                <p className="text-sm text-purple-600 font-medium">2024 - 2027</p>
+              </CardHeader>
+            </Card>
           </div>
         </div>
       </section>
@@ -334,6 +488,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Skills Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50" id="skills">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Skills & Tools</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Technologies and platforms I use to bring ideas to life
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {skills.map((skill, index) => (
+              <Card 
+                key={skill.name}
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-0 shadow-md animate-fade-in p-6"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={skill.logo} 
+                      alt={`${skill.name} logo`}
+                      className="h-12 w-12 object-contain group-hover:scale-110 transition-transform"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.nextElementSibling!.style.display = 'flex';
+                      }}
+                    />
+                    <div 
+                      className="h-12 w-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg hidden items-center justify-center text-white font-bold text-sm"
+                    >
+                      {skill.name.charAt(0)}
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">
+                    {skill.name}
+                  </h3>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white" id="contact">
         <div className="container mx-auto px-6 text-center">
@@ -344,17 +542,14 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <div className="flex items-center gap-2 text-blue-200">
-              <Mail className="h-5 w-5" />
-              <span>logith2027ug@buildwithivb.com</span>
+              <span>📧 logith2027ug@buildwithivb.com</span>
             </div>
             <div className="flex items-center gap-2 text-blue-200">
-              <Phone className="h-5 w-5" />
-              <span>+91 6369573667</span>
+              <span>📱 6369573667</span>
             </div>
             <div className="flex items-center gap-2 text-blue-200">
-              <Linkedin className="h-5 w-5" />
               <a href="https://www.linkedin.com/in/logith-p/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                LinkedIn Profile
+                🔗 LinkedIn Profile
               </a>
             </div>
           </div>
