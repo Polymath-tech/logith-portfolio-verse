@@ -17,6 +17,7 @@ const Index = () => {
       type: "Competition",
       achievement: "2nd Place",
       link: "https://www.canva.com/design/DAGsleQ66KM/hntz6RlRqExozJ6TBqKXXw/view",
+      iframe: "https://www.canva.com/design/DAGsleQ66KM/hntz6RlRqExozJ6TBqKXXw/view?embed",
       icon: Award,
       tags: ["Sustainability", "Innovation", "Problem Solving"]
     },
@@ -27,6 +28,7 @@ const Index = () => {
       category: "business",
       type: "Capstone Project",
       link: "https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view",
+      iframe:"https://www.canva.com/design/DAGUjtD52FE/axqtgid9yJwxLJbEI83tAw/view?embed",
       icon: Briefcase,
       tags: ["Strategy", "E-commerce", "Planning"]
     },
@@ -48,6 +50,7 @@ const Index = () => {
       category: "development",
       type: "E-commerce Development",
       link: "https://logi6369.myshopify.com/",
+      iframe: "https://logi6369.myshopify.com/",
       icon: Smartphone,
       tags: ["Shopify", "E-commerce", "Fitness"]
     },
@@ -58,6 +61,7 @@ const Index = () => {
       category: "research",
       type: "Capstone Project",
       link: "https://www.canva.com/design/DAGZ2SID4PI/zTwJOfSCtoKRS2YQVLUBjA/view",
+      iframe: "https://www.canva.com/design/DAGZ2SID4PI/zTwJOfSCtoKRS2YQVLUBjA/view?embed",
       icon: Users,
       tags: ["Psychology", "Branding", "Research"]
     },
@@ -78,6 +82,7 @@ const Index = () => {
       category: "business",
       type: "Finance Project",
       link: "https://www.canva.com/design/DAGsv4uK9vQ/AqwES9zbSsGojPJAMX53mw/view",
+      iframe: "https://www.canva.com/design/DAGsv4uK9vQ/AqwES9zbSsGojPJAMX53mw/view?embed",
       icon: Coffee,
       tags: ["Finance", "Break-even", "Bakery"]
     },
@@ -88,6 +93,7 @@ const Index = () => {
       category: "design",
       type: "Concept Design",
       link: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
+      iframe: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
       icon: Sparkles,
       tags: ["Figma", "Fantasy", "Transportation"]
     },
@@ -98,6 +104,7 @@ const Index = () => {
       category: "research",
       type: "Case Study",
       link: "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
+      iframe : "https://www.canva.com/design/DAGRCszmz3M/5ccWRTcnw_foOeUUL8PxXg/view?embed",
       icon: BarChart3,
       tags: ["Finance", "Banking", "Analysis"]
     },
@@ -128,6 +135,7 @@ const Index = () => {
       category: "business",
       type: "Capstone Project",
       link: "https://www.canva.com/design/DAGV9JW-kIs/rBptlA0KSC3ylfydnRNsbw/view",
+      iframe: "https://www.canva.com/design/DAGV9JW-kIs/rBptlA0KSC3ylfydnRNsbw/view?embed",
       icon: Target,
       tags: ["Marketing", "Segmentation", "Analysis"]
     },
@@ -138,6 +146,7 @@ const Index = () => {
       category: "business",
       type: "Business Plan",
       link: "https://www.canva.com/design/DAGslp179hU/8rjwdIdC-nMzj6Lfpctovw/view",
+      iframe: "https://www.canva.com/design/DAGslp179hU/8rjwdIdC-nMzj6Lfpctovw/view?embed",
       icon: Shield,
       tags: ["Cybersecurity", "Business Plan", "Technology"]
     },
@@ -158,6 +167,7 @@ const Index = () => {
       category: "media",
       type: "Podcast",
       link: "https://www.canva.com/design/DAGswIqT2lg/a5EdUep4VuUy51DTdfhc5w/view",
+      iframe: "https://www.canva.com/design/DAGswIqT2lg/a5EdUep4VuUy51DTdfhc5w/view?embed",
       icon: Mic,
       tags: ["Podcast", "Insurtech", "Analysis"]
     }
