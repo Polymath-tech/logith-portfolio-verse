@@ -157,7 +157,7 @@ const Index = () => {
       category: "design",
       type: "Concept Design",
       link: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
-      iframe: "https://www.figma.com/proto/auSHO92u9ciLTTM6nE8PRg?node-id=0-1&t=BZCSoSxzx06w54AD-6",
+      iframe: "https://embed.figma.com/proto/auSHO92u9ciLTTM6nE8PRg/Untitled?node-id=1-3&starting-point-node-id=1%3A3&embed-host=share",
       icon: Sparkles,
       tags: ["Figma", "Fantasy", "Transportation"]
     },
