@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, ChevronDown, Menu, X, Video, Eye, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -563,7 +562,7 @@ const Index = () => {
                         />
                       </div>
                     )}
-                    {project.link !== "#" && (
+                    {project.link && project.link !== "#" && (
                       <Button 
                         variant="outline" 
                         size="sm" 
