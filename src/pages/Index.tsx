@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, ChevronDown, Menu, X } from "lucide-react";
+import { ExternalLink, Award, Briefcase, Users, TrendingUp, Globe, Smartphone, FileText, BarChart3, Target, Shield, Palette, Coffee, Sparkles, BookOpen, Mic, ChevronDown, Menu, X, Video, Eye, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -98,6 +98,103 @@ const Index = () => {
       iframe: "https://www.canva.com/design/DAGswIqT2lg/a5EdUep4VuUy51DTdfhc5w/view?embed",
       icon: Mic,
       tags: ["Podcast", "Insurtech", "Analysis"]
+    },
+    {
+      id: 16,
+      title: "Visual Branding Analysis",
+      description: "Decoding ad poster content and analyzing visual branding elements",
+      category: "design",
+      type: "Brand Analysis",
+      link: "https://www.canva.com/design/DAGfkQiejCw/hFjeYDzz1I0EMjBKoIcTOA/view",
+      iframe: "https://www.canva.com/design/DAGfkQiejCw/hFjeYDzz1I0EMjBKoIcTOA/view?embed",
+      icon: Eye,
+      tags: ["Visual Design", "Brand Analysis", "Advertising"]
+    },
+    {
+      id: 17,
+      title: "Bidding Maestro Coffee Shop",
+      description: "Strategic business setup and bidding analysis for coffee shop establishment",
+      category: "business",
+      type: "Business Setup",
+      link: "https://www.canva.com/design/DAGsvzAcs-4/rVy8V924mDRDeFWv79iqUw/view",
+      iframe: "https://www.canva.com/design/DAGsvzAcs-4/rVy8V924mDRDeFWv79iqUw/view?embed",
+      icon: Coffee,
+      tags: ["Business Setup", "Coffee Shop", "Strategy"]
+    },
+    {
+      id: 18,
+      title: "Skincare Brand Development Strategy",
+      description: "Creating comprehensive development strategy for chosen skincare brand",
+      category: "business",
+      type: "Brand Strategy",
+      link: "https://www.canva.com/design/DAGT8ergAuk/UbS4ubIv1sUJAEISCZQUIQ/view",
+      iframe: "https://www.canva.com/design/DAGT8ergAuk/UbS4ubIv1sUJAEISCZQUIQ/view?embed",
+      icon: Sparkles,
+      tags: ["Brand Strategy", "Skincare", "Development"]
+    },
+    {
+      id: 19,
+      title: "Instagram Ad Poster Design",
+      description: "Creating colorful and engaging ad poster for Instagram marketing campaign",
+      category: "design",
+      type: "Marketing Design",
+      link: "https://www.canva.com/design/DAGZJ2v6kYo/QzuPTvpZRD10ilxJEtGASA/watch",
+      iframe: "https://www.canva.com/design/DAGZJ2v6kYo/QzuPTvpZRD10ilxJEtGASA/view?embed",
+      icon: Instagram,
+      tags: ["Instagram", "Advertising", "Visual Design"]
+    },
+    {
+      id: 20,
+      title: "Marketing Campaign Design",
+      description: "Additional marketing project showcasing creative advertising design",
+      category: "design",
+      type: "Marketing Project",
+      link: "https://www.canva.com/design/DAGY4B4GnOQ/Y30P9jS96ua_iNaVgLUTKA/watch",
+      iframe: "https://www.canva.com/design/DAGY4B4GnOQ/Y30P9jS96ua_iNaVgLUTKA/view?embed",
+      icon: Palette,
+      tags: ["Marketing", "Design", "Campaign"]
+    },
+    {
+      id: 21,
+      title: "Classes Education Platform",
+      description: "Educational platform design and strategy for school management system",
+      category: "design",
+      type: "Educational Platform",
+      link: "https://www.canva.com/design/DAGswM_2wCA/4EeW-Fm2a3LnhLJ7T6VWYQ/view",
+      iframe: "https://www.canva.com/design/DAGswM_2wCA/4EeW-Fm2a3LnhLJ7T6VWYQ/view?embed",
+      icon: BookOpen,
+      tags: ["Education", "Platform Design", "School"]
+    },
+    {
+      id: 22,
+      title: "Vilvah Instagram Analysis",
+      description: "Comprehensive analysis and decoding of Vilvah brand's Instagram strategy",
+      category: "research",
+      type: "Social Media Analysis",
+      link: "https://www.canva.com/design/DAGefb0_P5w/WjiTuq1bpYsh1wS0YgtoGQ/view",
+      iframe: "https://www.canva.com/design/DAGefb0_P5w/WjiTuq1bpYsh1wS0YgtoGQ/view?embed",
+      icon: Instagram,
+      tags: ["Instagram", "Brand Analysis", "Social Media"]
+    },
+    {
+      id: 23,
+      title: "IVB Project Video",
+      description: "Professional video editing project created for IVB program showcase",
+      category: "media",
+      type: "Video Production",
+      link: "https://photos.app.goo.gl/HZVBSPwVYihbCThg9",
+      icon: Video,
+      tags: ["Video Editing", "IVB", "Production"]
+    },
+    {
+      id: 24,
+      title: "One Day Shoot & Edit",
+      description: "Complete video production from shooting to final edit completed in one day",
+      category: "media",
+      type: "Video Production",
+      link: "https://photos.app.goo.gl/XHDJeCjDYMP1x2DH6",
+      icon: Video,
+      tags: ["Video Production", "Editing", "Photography"]
     },
     {
       id: 3,
