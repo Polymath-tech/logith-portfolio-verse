@@ -134,17 +134,6 @@ const Index = () => {
     },
     {
       id: 19,
-      title: "Instagram Ad Poster Design",
-      description: "Creating colorful and engaging ad poster for Instagram marketing campaign",
-      category: "design",
-      type: "Marketing Design",
-      link: "https://www.canva.com/design/DAGZJ2v6kYo/QzuPTvpZRD10ilxJEtGASA/watch",
-      iframe: "https://www.canva.com/design/DAGZJ2v6kYo/QzuPTvpZRD10ilxJEtGASA/view?embed",
-      icon: Instagram,
-      tags: ["Instagram", "Advertising", "Visual Design"]
-    },
-    {
-      id: 20,
       title: "Marketing Campaign Design",
       description: "Additional marketing project showcasing creative advertising design",
       category: "design",
@@ -155,7 +144,7 @@ const Index = () => {
       tags: ["Marketing", "Design", "Campaign"]
     },
     {
-      id: 21,
+      id: 20,
       title: "Classes Education Platform",
       description: "Educational platform design and strategy for school management system",
       category: "design",
@@ -166,7 +155,7 @@ const Index = () => {
       tags: ["Education", "Platform Design", "School"]
     },
     {
-      id: 22,
+      id: 21,
       title: "Vilvah Instagram Analysis",
       description: "Comprehensive analysis and decoding of Vilvah brand's Instagram strategy",
       category: "research",
@@ -177,7 +166,7 @@ const Index = () => {
       tags: ["Instagram", "Brand Analysis", "Social Media"]
     },
     {
-      id: 23,
+      id: 22,
       title: "IVB Project Video",
       description: "Professional video editing project created for IVB program showcase",
       category: "media",
@@ -187,7 +176,7 @@ const Index = () => {
       tags: ["Video Editing", "IVB", "Production"]
     },
     {
-      id: 24,
+      id: 23,
       title: "One Day Shoot & Edit",
       description: "Complete video production from shooting to final edit completed in one day",
       category: "media",
@@ -264,10 +253,16 @@ const Index = () => {
       description: "Shopify website for fitness watches and headphones with complete product catalog",
       category: "development",
       type: "E-commerce Development",
-      link: "https://logi6369.myshopify.com/",
-      iframe: "https://logi6369.myshopify.com/",
       icon: Smartphone,
       tags: ["Shopify", "E-commerce", "Fitness"]
+    },{
+      id: 24 ,
+      title: "Instagram Ad Poster Design",
+      description: "Creating colorful and engaging ad poster for Instagram marketing campaign",
+      category: "design",
+      type: "Marketing Design",
+      icon: Instagram,
+      tags: ["Instagram", "Advertising", "Visual Design"]
     }
   ];
 
